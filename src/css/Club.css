@@ -1,0 +1,9 @@
+.club {
+    display: flex;
+    width: 900px;
+    margin: 0px auto;
+}
+
+.club-list {
+    width: 100%;
+}

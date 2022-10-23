@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    max-width: 800px;
+    margin: 0px auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-logo img {
+    width: 130px;
+    height: auto;
+}
+
+.header-link {
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: -2px;
+    color: #fff;
+}
+
+.header-link:hover {
+    color: #cce0ff;
+}
+
+.header-user {
+    display: flex;
+    font-size: 14px;
+    letter-spacing: -2px;
+}
+
+.login-link {
+    margin-right: 12px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.login-link:hover {
+    color: #cce0ff;
+}
+
+.signup-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.signup-link:hover {
+    color: #cce0ff;
+}

@@ -1,0 +1,22 @@
+.club-category {
+    display: inline-flexbox;
+    max-width: 500px;
+    margin: 0px auto;
+}
+
+.club-category-btn {
+    padding: 8px 15px;
+    margin: 5px 5px;
+    margin-left: 7px;
+    border-radius: 22px;
+    border: none;
+    font-size: 12px;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
+    background-color: #8bbaff;
+    cursor: pointer;
+    color: #fff;
+}
+
+.club-category-btn:hover {
+    color: #c4ddff;
+}

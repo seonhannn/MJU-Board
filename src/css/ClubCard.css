@@ -1,0 +1,41 @@
+.club-card {
+    margin-top: 50px;
+    height: 500px;
+}
+
+.club-card-slide {
+    height: 450px;
+    background-color: #fff;
+    border-radius: 22px;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
+}
+
+.club-card-slide:hover {
+    transform: scale(0.98);
+    background-color: #c4ddff;
+    box-shadow: none;
+}
+
+.club-card-link {
+    text-decoration: none;
+}
+
+.club-card-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 36px;
+    height: 370px;
+}
+
+.club-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #424242;
+}
+
+.club-card-desc {
+    font-size: 15px;
+    margin-top: 50px;
+    color: #424242;
+}
