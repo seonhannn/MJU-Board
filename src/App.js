@@ -7,8 +7,12 @@ import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import Write from "./pages/Write";
 import "../src/css/App.css";
+import { useSelector } from "react-redux";
 
 function App() {
+  const token = useSelector((state) => state.Auth.token);
+  console.log(token);
+
   return (
     <div className="App">
       <BrowserRouter>
