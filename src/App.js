@@ -3,6 +3,9 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Main from "./pages/Main";
 import Header from "./components/Header";
 import BoardList from "./pages/BoardList";
+import LogIn from "./pages/LogIn";
+import SignUp from "./pages/SignUp";
+import Write from "./pages/Write";
 import "../src/css/App.css";
 
 function App() {
@@ -13,6 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Main></Main>}></Route>
           <Route path="/BoardList:id" element={<BoardList></BoardList>}></Route>
+          <Route path="/LogIn" element={<LogIn></LogIn>}></Route>
+          <Route path="/SignUp" element={<SignUp></SignUp>}></Route>
+          <Route path="/Wirte" element={<Write></Write>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
