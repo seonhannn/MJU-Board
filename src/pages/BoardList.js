@@ -7,20 +7,22 @@ function BoardList() {
     const [pageCount, setPageCount] = useState(0);
     const [boardList, setBoardList] = useState([]);
     const [searchParams, setSearchParams] = useSearchParams();
-    
+
     useEffect(() => {
         const getBoardList = async () => {
             const pageNumber = searchParams.get("page");
-            const {data} = await axios.get(`/api/board/list?page_number=${pageNumber}&page_size=4`);
+            const {data} = await axios.get(`/api/boards/1/list`);
             return data;
         }
 
         getBoardList().then(result => setBoardList(result));
 
         const getTotalBoard = async () => {
-            const {data} = await axios.get("/api/board/count");
-            return data.total;
-        } 
+
+            // 전체 게시글 개수
+            // const {data} = await axios.get(`/api/boards/1/count`);
+            // return data.total;
+        }
 
         getTotalBoard().then(result => setPageCount(Math.ceil(result/4)));
     }, [])
@@ -29,10 +31,11 @@ function BoardList() {
         <div>
             동아리 게시판
             <div>
-                {boardList.map((item, index) => {
-                    <div key={item.id}>
-                        {item.id}
+                {boardList.data && boardList.data.map((item, index) => {
+                    return (<div key={item.id}>
+                        {item.title}
                     </div>
+                    )
                 })}
             </div>
         </div>

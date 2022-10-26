@@ -27,7 +27,7 @@ function ClubCard({item}) {
                 {item.map((Val) => {
                     return (
                         <SwiperSlide className="club-card-slide">
-                            <Link to={`/BoardList/${Val.id}`} className="club-card-link">
+                            <Link to={`/boards/${Val.id}/list`} className="club-card-link">
                                 <div className="club-card-content">
                                     <div className="club-card-title">
                                         {Val.title}

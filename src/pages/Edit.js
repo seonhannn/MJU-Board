@@ -22,7 +22,7 @@ function EditBoard() {
   // title, content, image의 상태를 바꿔줌
   useEffect(() => {
     const getBoard = async () => {
-      const {data} = await axios.get(`/api/board/${board_id}`);
+      const {data} = await axios.get(`/api/boards/1`);
       return data;
     }
     getBoard().then((result) => {
@@ -42,7 +42,7 @@ function EditBoard() {
       formData.append("content", content);
       // 수정할 땐 board_id를 보내자
       formData.append("id", board_id);
-      await api.put("/api/board", formData);
+      await api.put(`http://52.78.83.72:8080/api/boards/update/${id}`, formData);
       window.alert("수정이 완료되었습니다.");
       // 이전 페이지로 돌아가기
       window.location.href = `/board/${board_id}`;

@@ -37,7 +37,7 @@ function SignUp() {
     const submit = async (values) => {
         const {email, username, password} = values;
         try {
-            await axios.post("/api/auth/signup", {
+            await axios.post("http://52.78.83.72:8080/api/users/signup", {
                 email,
                 username,
                 password,
@@ -82,9 +82,9 @@ function SignUp() {
                                     </input>
                                 </div>
                             </div>
-                                {/* <div className="error-message">
+                                <div className="error-message">
                                     {errors.email}
-                                </div> */}
+                                </div>
                             <div className="signup-input-form">
                                 <label htmlFor="username">이름</label>
                                 <div className="signup-input-container">
@@ -97,9 +97,9 @@ function SignUp() {
                                     </input>
                                 </div>
                             </div>
-                                {/* <div className="error-message">
+                                <div className="error-message">
                                     {errors.username}
-                                </div> */}
+                                </div>
                             <div className="signup-input-form">
                                 <label htmlFor="password">비밀번호</label>
                                 <div className="signup-input-container">
@@ -113,9 +113,9 @@ function SignUp() {
                                     </input>
                                 </div>
                             </div>
-                                {/* <div className="error-message">
+                                <div className="error-message">
                                     {errors.password}
-                                </div> */}
+                                </div>
                             <div className="signup-input-form">
                                 <label htmlFor="password2">비밀번호 확인</label>
                                 <div className="signup-input-container">
@@ -129,9 +129,9 @@ function SignUp() {
                                     </input>
                                 </div>
                             </div>
-                                {/* <div className="error-message">
+                                <div className="error-message">
                                     {errors.password2}
-                                </div> */}
+                                </div>
                             <input
                                 type="submit"
                                 value="회원가입"

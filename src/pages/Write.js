@@ -26,7 +26,7 @@ function Write() {
       formData.append("content", content);
       formData.append("user_id", jwtUtils.getId(token));
 
-      await api.post("/api/board", formData);
+      await api.post("http://52.78.83.72:8080/api/boards/${clubId}/create", formData);
       window.alert("등록이 완료되었습니다.");
       navigate("/boardList");
     } catch (e) {

@@ -21,7 +21,7 @@ function App() {
         <Header></Header>
         <Routes>
           <Route path="/" element={<Main></Main>}></Route>
-          <Route path="/BoardList/:id" element={<BoardList></BoardList>}></Route>
+          <Route path="/boards/1/list" element={<BoardList></BoardList>}></Route>
           <Route path="/LogIn" element={<LogIn></LogIn>}></Route>
           <Route path="/SignUp" element={<SignUp></SignUp>}></Route>
           <Route path="/Wirte" element={<PrivateRoute path="/Write" component={Write}></PrivateRoute>}></Route>

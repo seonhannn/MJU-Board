@@ -17,7 +17,7 @@ const Board = () => {
   // board 가져오기
   useEffect(() => {
     const getBoard = async () => {
-      const {data} = await axios.get(`/api/board/${board_id}`);
+      const {data} = await axios.get(`http://52.78.83.72:8080/api/board?{board_id}`);
       return data;
     }
     getBoard().then(result => setBoard(result)).then(() => setIsLoaded(true));
@@ -81,7 +81,7 @@ const Board = () => {
                 onClick={async () => {
                   setShow(false);
                   // 모달의 예 버튼 클릭시 게시물 삭제
-                  await api.delete(`/api/board/${board_id}`);
+                  await api.delete(`http://52.78.83.72:8080/api/boards/${board_id}`);
                   alert("게시물이 삭제되었습니다.");
                   window.location.href = "/BoardList";
                 }}

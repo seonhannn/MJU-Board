@@ -25,7 +25,7 @@ function LogIn() {
     const {email, password} = values;
 
     try {
-      const {data} = await axios.post("/api/auth/signin", {
+      const {data} = await axios.post("http://52.78.83.72:8080/api/auth/signin", {
         email,
         password,
       });
