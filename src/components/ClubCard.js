@@ -29,13 +29,13 @@ function ClubCard({item}) {
                         <SwiperSlide className="club-card-slide">
                             <Link to={`/boards/${Val.id}/list`} className="club-card-link">
                                 <div className="club-card-content">
-                                    <div className="club-card-title">
+                                    <div className="club-card-title" key={"Val"}>
                                         {Val.title}
                                     </div>
-                                    <div className="club-card-img">
+                                    <div className="club-card-img" key={"Val"}>
                                         {Val.img}
                                     </div>
-                                    <div className="club-card-desc">
+                                    <div className="club-card-desc" key={"Val"}>
                                         {Val.desc}
                                     </div>
                                 </div>

@@ -22,7 +22,7 @@ function EditBoard() {
   // title, content, image의 상태를 바꿔줌
   useEffect(() => {
     const getBoard = async () => {
-      const {data} = await axios.get(`/api/boards/1`);
+      const {data} = await axios.get(`http://52.78.83.72:8080/api/boards/`);
       return data;
     }
     getBoard().then((result) => {
